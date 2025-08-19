@@ -2,8 +2,13 @@
 title: "Syllabus"
 ---
 
+```{r, echo=FALSE}
+source('../../config.R')
+```
+
+
 **Instructors:** Jason Bryer, Ph.D. and Angela Lui, Ph.D.  
-**Class Meetup:** Wednesday 8:00pm to 9:00pm  
+**Class Meetup:** `r class_day` `r class_time`  
 **Office Hours:** By appointment  
 **Email:** <a href="mailto:jason.bryer@cuny.edu">jason.bryer@cuny.edu</a>, <a href="mailto:angela.lui@cuny.edu">angela.lui@cuny.edu</a>    
 

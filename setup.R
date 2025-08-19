@@ -17,9 +17,12 @@ remotes::install_github('rstudio/chromote')
 
 source('config.R')
 
-# Setting up the Github repo
+##### Setting up the Github repo ###############################################
 usethis::use_git()
-usethis::use_github()
+# Create repo on Github
+github_link
+usethis::use_git_remote(name = github_link, url = paste0('https://github.com/jbryer/', github_link))
+# usethis::use_github()
 
 
 ##### Course Logo ##############################################################
