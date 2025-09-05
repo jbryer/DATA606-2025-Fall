@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -340,41 +374,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>These mini projects will have you explore statistical topics using R. You can use the <code>startLab</code> function in the <code>DATA606</code> package to get started, or copy the templates from the links below. <strong>Please submit a PDF (preferred) or HTML file along with your Rmarkdown file.</strong> Be sure to answer all questions in lab, not just the <em>on your own section.</em> Labs should be submitted on Blackboard.</p>
+<p>Here are the commands you can use to start the labs (note change <code>Lab1</code> to the appropriate lab number).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DATA606)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getLabs</span>() <span class="co"># This will list all the labs available</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">startLab</span>(<span class="st">'Lab1'</span>) <span class="co"># This will copy the lab folder to your working directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol start="1">
 <li value="1">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab1/Lab1_intro_to_r.html">Introduction to R and RStudio</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab1/Lab1_intro_to_r.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab1/Lab1_intro_to_r.html">Introduction to R and RStudio</a>
 </li>
 <li value="2">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab2/Lab2_intro_to_data.html">Introduction to Data</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab2/Lab2_intro_to_data.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab2/Lab2_intro_to_data.html">Introduction to Data</a>
 </li>
 <li value="3">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab3/Lab3_probability.html">Probability</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab3/Lab3_probability.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab3/Lab3_probability.html">Probability</a>
 </li>
 <li value="4">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab4/Lab4_normal_distribution.html">Distributions of Random Variables</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab4/Lab4_normal_distribution.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab4/Lab4_normal_distribution.html">Distributions of Random Variables</a>
 </li>
 <li value="5">
 Foundations for Statistical Inference
 <ol type="A">
 <li value="A">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5a/Lab5a_sampling_distributions.html">Sampling Distributions</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5a/Lab5a_sampling_distributions.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5a/Lab5a_sampling_distributions.html">Sampling Distributions</a>
 </li>
 <li value="B">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5b/Lab5b_confidence_intervals.html">Confidence Levels</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5b/Lab5b_confidence_intervals.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab5b/Lab5b_confidence_intervals.html">Confidence Levels</a>
 </li>
 </ol>
 </li>
 <li value="6">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab6/Lab6_inf_for_categorical_data.html">Inference for Categorical Data</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab6/Lab6_inf_for_categorical_data.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab6/Lab6_inf_for_categorical_data.html">Inference for Categorical Data</a>
 </li>
 <li value="7">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab7/Lab7_inf_for_numerical_data.html">Inference for Numerical Data</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab7/Lab7_inf_for_numerical_data.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab7/Lab7_inf_for_numerical_data.html">Inference for Numerical Data</a>
 </li>
 <li value="8">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab8/Lab8_simple_regression.html">Introduction to Linear Regression</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab8/Lab8_simple_regression.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab8/Lab8_simple_regression.html">Introduction to Linear Regression</a>
 </li>
 <li value="9">
-<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab9/Lab9_multiple_regression.html">Multiple Linear Regerssion</a> (<a href="https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab9/Lab9_multiple_regression.Rmd?raw=true">Template</a>)
+<a href="https://htmlpreview.github.io/?https://github.com/jbryer/DATA606/blob/master/inst/labs/Lab9/Lab9_multiple_regression.html">Multiple Linear Regerssion</a>
 </li>
 </ol>
 
