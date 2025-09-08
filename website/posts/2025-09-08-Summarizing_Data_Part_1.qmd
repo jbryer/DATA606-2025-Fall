@@ -1,0 +1,17 @@
+---
+title: "Summarizing Data Part 1"
+author: "Jason Bryer"
+date: 2025-09-08
+draft: false
+description: "Slides and recording for the *Summarizing Data Part 1* meetup."
+categories: ["Meetups"]
+image: "2025-09-08-Summarizing_Data_Part_1.png"
+---
+
+
+[Click here](/slides/02-Summarizing_Data1.html#1) to open the slides ([PDF](/slides/02-Summarizing_Data1.pdf)).
+
+
+
+
+
