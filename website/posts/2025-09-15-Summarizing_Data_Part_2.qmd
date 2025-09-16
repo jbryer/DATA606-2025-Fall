@@ -1,0 +1,80 @@
+---
+title: "Summarizing Data Part 2"
+author: "Jason Bryer"
+date: 2025-09-15
+draft: false
+description: "Slides and recording for the *Summarizing Data Part 2* meetup."
+categories: ["Meetups"]
+image: "2025-09-15-Summarizing_Data_Part_2.png"
+---
+
+
+[Click here](/slides/02-Summarizing_Data2.html#1) to open the slides ([PDF](/slides/02-Summarizing_Data2.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gh51jHFKR3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+install.packages('brickset')
+library(brickset)
+data("legosets")
+
+names(legosets)
+
+ggplot(legosets, aes(x = 'Lego', pieces)) +
+	geom_boxplot() +
+	geom_point(y = mean(legosets$pieces, na.rm= TRUE), color = 'blue', size = 4)
+	# scale_y_log10()
+
+mean(log(legosets$pieces + 1), na.rm = TRUE)
+log(mean(legosets$pieces, na.rm = TRUE)) - 1
+
+ggplot(legosets, aes(x = pieces, y = US_retailPrice, color = availability)) + 
+	geom_point(alpha = 0.1) +
+	theme_minimal()
+
+ggplot(legosets, aes(x = pieces, y = US_retailPrice)) + 
+	geom_point() +
+	theme_minimal()
+
+ggplot(legosets, aes(x = pieces, y = US_retailPrice)) + 
+	geom_point(color = 'purple') +
+	theme_minimal()
+
+ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram()
+ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(binwidth = 25)
+ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(bins = 100)
+ggplot(legosets, aes(x = US_retailPrice)) + geom_density()
+
+x <- seq(0, 1000, by = 0.1)
+df <- data.frame(x = x, y = log(x))
+ggplot(df, aes(x = x, y = y)) + geom_path() + geom_point()
+
+# https://nycbirdalliance.org/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSnJkbUZ5YVdGdWRITXZPRzVqZGpBMGNERjNlbTUwWkd0cVlXbzJhV0UxZDJ0MGRUTnVaUzgzTm1FNFkyWTRPVGxpWW1ZeFlUZzBPREl5WTJWaVlURmpNVEV6WVdNM1pqRmlaR0kyWW1Wa1ltTTBNVEl4TVRWbVl6azFaV016TVRZeU1tTXdaR0pqQmpvR1JWUTZFR1JwYzNCdmMybDBhVzl1U1NKeGFXNXNhVzVsT3lCbWFXeGxibUZ0WlQwaWFIVnRZVzR0Y21Wc1lYUmxaRjlpYVhKa1gyUmxZWFJvYzE5bWFXNWhiQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyaDFiV0Z1TFhKbGJHRjBaV1JmWW1seVpGOWtaV0YwYUhOZlptbHVZV3d1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjUtMDktMTZUMDA6NTI6NTMuNTcyWiIsInB1ciI6ImJsb2Jfa2V5In19--240aa3bfaa08f359b0e9a01e831ff7fd77117e64/human-related_bird_deaths_final.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22human-related_bird_deaths_final.png%22%3B+filename%2A%3DUTF-8%27%27human-related_bird_deaths_final.png
+birds <- data.frame(
+	category = c('Collisions with vehicles',
+	  'Poison', 
+	  'Collisions with electrical lines',
+	  'Electrocution',
+	  'Oil pits',
+	  'Collisions wind turbines',
+	  'Collisions with building glass',
+	  'Cats'),
+	deaths = c(214500000,
+			   7200000,
+			   32500000,
+			   6250000,
+			   750000,
+			   328000,
+			   676500000,
+			   1850700000)
+)
+
+library(xkcd)
+
+
+ggplot(birds, aes(x = category, y = deaths)) + 
+	geom_bar(stat = 'identity') +
+	coord_flip() +
+	xlab('') +
+	ylab('Number of deaths') +
+	theme_minimal()
+
