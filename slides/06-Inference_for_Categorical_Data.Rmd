@@ -1,8 +1,8 @@
 ---
 title: "Inference for Categorical Data"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D.
-date: "March 12, 2025"
+author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+date: "October 13, 2025"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -59,29 +59,6 @@ ompWordCloud(omp$`What was the most important thing you learned during this clas
 ompWordCloud(omp$`What important question remains unanswered for you?`)
 ```
 ]
-
-
----
-# Announcements  `r hexes(c('infer','mice'))`
-
-The mid-term exam has been posted to Brightspace.
-
-* It is due March 16th by midnight.
-* 20 multiple choice questions.
-* May use your book and notes. Do not consult with other students.
-* Good luck!
-
-Missing Data.
-
-* If you encounter missing data in the labs or your project it is ok to remove them *for this class*.
-* In general, removing missing data is not advisable, instead you can impute. There are two packages that do a good job for imputation: [`mice`](https://github.com/amices/mice) (*my preferred package*) and [`Amelia`](https://gking.harvard.edu/amelia).
-* Do not do mean/median/mode imputation!
-
-
-The `infer` package.
-
-* Labs 6 and 7 will make use of the `infer` package.
-* Package website: https://infer.tidymodels.org
 
 
 ---
