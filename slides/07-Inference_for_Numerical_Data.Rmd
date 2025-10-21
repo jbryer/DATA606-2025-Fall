@@ -1,8 +1,8 @@
 ---
 title: "Inference for Numerical Data"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D.
-date: "March 19, 2025"
+author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+date: "October 20, 2025"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -65,7 +65,7 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 
 # Data Project Proposal
 
-Due April 1<sup>st</sup>ish Select a dataset that interests you. For the proposal, you need to answer the questions below.
+Due November 3<sup>rd</sup>ish Select a dataset that interests you. For the proposal, you need to answer the questions below.
 
 .font80[
 * Research question
@@ -79,7 +79,7 @@ Due April 1<sup>st</sup>ish Select a dataset that interests you. For the proposa
 * Relevant summary statistics
 ]
 
-More information including template and suggested datasets located here: https://spring2025.data606.net/assignments/project/
+More information including template and suggested datasets located here: https://fall2025.data606.net/assignments/project/
 
 
 
@@ -851,6 +851,30 @@ class: font120
 	* Adjust a to $\alpha/J$ where J is the number of comparisons.
 	* 95% confidence (1 - 0.05) with 3 comparisons adjusts to $(1 - 0.05/3) \approx  0.98333$.
 	* Use this adjusted value to find t**.
+
+---
+
+```{r, echo=FALSE}
+knitr::include_graphics('images/xkcd_significant1.png')
+```
+
+.font50[Source: https://xkcd.com/882/]
+
+---
+
+```{r, echo=FALSE, out.width='30%'}
+knitr::include_graphics('images/xkcd_significant2.png')
+```
+
+.font50[Source: https://xkcd.com/882/]
+
+---
+
+```{r, echo=FALSE}
+knitr::include_graphics('images/xkcd_significant3.png')
+```
+
+.font50[Source: https://xkcd.com/882/]
 
 ---
 # Multiple Comparisons (no Bonferroni adjustment)
