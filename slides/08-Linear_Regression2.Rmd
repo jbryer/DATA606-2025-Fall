@@ -1,8 +1,8 @@
 ---
 title: "Linear Regression Part 2"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D.
-date: "April 2, 2025"
+author: Jason Bryer, Ph.D. ange Angela Lui, Ph.D.
+date: "November 3, 2025"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
