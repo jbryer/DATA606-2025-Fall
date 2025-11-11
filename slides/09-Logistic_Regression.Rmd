@@ -1,8 +1,8 @@
 ---
 title: "Maximum Likelihood Estimation and Logistic Regression"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D.
-date: "April 9, 2025"
+author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+date: "November 10, 2025"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -108,9 +108,9 @@ class: font90
 
 * Proper use of descriptive and/or inferential statistics.
 
-Full rubric available here: https://spring2025.data606.net/assignments/project/
+Full rubric available here: https://fall2025.data606.net/assignments/project/
 
-[Click here to sign-up for presentation time here](https://docs.google.com/spreadsheets/d/1HgPEIM1ikJ5MXu8njDiq3Cw_aFXD1fj8gDtTGNL4fqY/edit?usp=sharing)
+[Click here to sign-up for presentation time here](https://docs.google.com/spreadsheets/d/174dZWo0QmOoEZvN14ldEtxcYzOka2pcO6CJA6az3nY4/edit?usp=sharing)
 
 ---
 class: inverse, middle, center
@@ -937,7 +937,7 @@ study[study$Hours == 2.25,]
 (1 - study[study$Hours == 2.25,]$Predict) |> log()
 ```
 
-Note that the lines correspond to the value we take the log of. For "successes" (i.e. outcome = 1) then we simply take the log of the predicted probability. For "failurs" (i.e outcome = 0), we take the log of 1 minus the predicted probability. 
+Note that the lines correspond to the value we take the log of. For "successes" (i.e. outcome = 1) then we simply take the log of the predicted probability. For "failures" (i.e outcome = 0), we take the log of 1 minus the predicted probability. 
 
 ---
 # Assumptions
