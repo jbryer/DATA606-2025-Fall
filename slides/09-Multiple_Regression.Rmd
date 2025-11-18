@@ -1,8 +1,8 @@
 ---
 title: "Multiple Linear Regression"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D.
-date: "April 22, 2025"
+author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
+date: "November 17, 2025"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -433,9 +433,15 @@ where *n* is the number of cases and *p* is the number of predictors (explanator
 class: left, font140
 # One Minute Paper
 
-Complete the one minute paper: 
-`r one_minute_paper`
-
+.pull-left[
 1. What was the most important thing you learned during this class?
 2. What important question remains unanswered for you?
+]
+.pull-right[
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+qrcode::qr_code(one_minute_paper) |> plot(col = c('#FAFAFA', 'black'))
+```
+]
+
+`r one_minute_paper`
 

@@ -10,7 +10,7 @@ one_minute_paper_results <- 'https://docs.google.com/spreadsheets/d/1IHcSTv32qCn
 formative_assessment <- 'https://forms.gle/6RmyywJ97L7iJBYb9'
 formative_assessmnet_results <- 'https://docs.google.com/spreadsheets/d/18RUsug_CsPnb54RIxLBDVrMMaoxbuzGtt8n0cK0PQBM/edit?resourcekey=&gid=1688660122#gid=1688660122'
 slack_invite_link <- 'https://cuny-msds.slack.com/archives/C08TB8BTZ8T'
-slack_link <- 'https://cuny-msds.slack.com'
+slack_link <- 'http://cuny-msds.slack.com'
 
 library("knitr")
 library("tidyverse")
