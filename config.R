@@ -135,7 +135,7 @@ meetup_image <- function(title,
 						 date = format(Sys.Date(), '%B %d, %Y'),
 						 url = paste0('https://', tolower(semester), year, '.data606.net'),
 						 out_file) {
-	# print(here::here())
+	print(here::here())
 	cuny_logo <- png::readPNG(paste0(here::here(), '/website/images/CUNY_SPS_Logo_Wide.png')) |>
 		grid::rasterGrob(interpolate = TRUE)
 	course_logo <- png::readPNG(paste0(here::here(), '/',

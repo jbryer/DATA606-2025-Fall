@@ -6,8 +6,12 @@ image: "welcome.png"
 description: "Important information on how to get started with this course. Please read this post carefully."
 ---
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+```{r, include=FALSE}
 source('../../config.R')
+
+```
+
+```{r, eval=FALSE, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 meetup_image(out_file = 'welcome.png',
 			 title = 'Welcome to DATA606!',
 			 date = ' ')
